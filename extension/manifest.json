@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Cryptowatcher",
+  "description": "A simple application to track live cryptocurrency prices",
+  "version": "1.0",
+  "browser_action": {
+     "default_icon": "https://res.cloudinary.com/dv2546q8h/image/upload/v1533048145/crypto_nnjzgf.png",
+     "default_popup": "index.html",
+     "default_title": "Cryptowatcher"
+  },
+  "permissions": [
+     "activeTab"
+  ]
+}
