@@ -15,9 +15,11 @@
   "author": "A retired superhero",
   "license": "ISC",
   "dependencies": {
-    "pusher": "^2.1.2"
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "pusher": "^2.1.2",
+    "sqlite3": "^4.0.2"
   }
 }
-
-
-

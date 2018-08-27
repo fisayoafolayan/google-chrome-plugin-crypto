@@ -1,0 +1,23 @@
+body {
+  min-width: 200px;
+  height: 300px;
+}
+.back-btn {
+  height: 1.2rem;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 900em;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #3A3A3B;
+  text-decoration: none;
+  padding: 0.2rem 1rem;
+  margin-top: 0.5rem;
+}
+nav {
+  display: grid;
+  grid-template-columns: auto auto; 
+  grid-template-rows: auto; 
+  justify-content: space-between;    
+  align-content: space-between;    
+}

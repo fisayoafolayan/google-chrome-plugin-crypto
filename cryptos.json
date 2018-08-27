@@ -1,4 +1,4 @@
 {
-        "coins"      : ["BTC","ETH","LTC","XRP"],
-        "currencies" : ["USD","EUR","GBP"]
+    "coins"      : ["BTC","ETH","LTC","XRP"],
+    "currencies" : ["USD","EUR","GBP"]
 }
