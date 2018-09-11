@@ -22,7 +22,7 @@ $ git clone https://github.com/fisayoafolayan/google-chrome-plugin-crypto.git
 Run the application with the following command
 ```bash
 $ npm install
-
+```
 ## Run
 Run the application with the following command
 ```bash
