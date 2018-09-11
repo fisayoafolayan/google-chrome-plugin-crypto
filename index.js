@@ -77,7 +77,7 @@ router.get('/favorite', function(req, res) {
         // We use the favs returned by the db manager
            if (err) return res.status(500).send(JSON.stringify({message : "There was a problem getting your favs"}))
               let coins = []
-              if (favs) {
+              if (favs && favs.length > 0) {
                 favs.forEach( fav => coins.push(fav.coin))
                 const url = generateUrl(coins,cryptos.currencies)
                 const event = `user${decoded.id}` 
