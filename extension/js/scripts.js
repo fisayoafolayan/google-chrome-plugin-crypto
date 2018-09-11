@@ -1,5 +1,5 @@
-const pusher = new Pusher('a1fe16427550ee94f4db', {
-  cluster: 'eu',
+const pusher = new Pusher('YOUR-KEY-HERE', {
+  cluster: 'YOUR-CLUSTER_HERE',
   encrypted: true
 })
 
