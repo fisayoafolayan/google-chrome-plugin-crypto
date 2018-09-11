@@ -17,7 +17,7 @@ class Db {
     this.db.run(sql);
 
     sql = `
-      CREATE TABLE IF NOT EXISTS favourite (
+      CREATE TABLE IF NOT EXISTS favorite (
       id integer PRIMARY KEY, 
       coin text NOT NULL, 
       user_id integer NOT NULL)`
@@ -34,9 +34,9 @@ class Db {
     )
   }
 
-  selectFavourite(user_id, callback) {
+  selectFavorite(user_id, callback) {
     return this.db.all(
-      `SELECT * FROM favourite WHERE user_id = ?`,
+      `SELECT * FROM favorite WHERE user_id = ?`,
       [user_id], (err,row) => {
           callback(err,row)
       }
@@ -52,9 +52,9 @@ class Db {
     )
   }
 
-  insertFavourite(favs, callback) {
+  insertFavorite(favs, callback) {
     return this.db.run(
-      'INSERT INTO favourite (coin,user_id) VALUES (?,?)',
+      'INSERT INTO favorite (coin,user_id) VALUES (?,?)',
       favs, err => {
           callback(err)
       }

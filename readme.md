@@ -18,7 +18,10 @@ $ git clone https://github.com/fisayoafolayan/google-chrome-plugin-crypto.git
 * A Pusher app for realtime price tracking
 * A CryptoCompare API key.
 
-
+## Install dependencies
+Run the application with the following command
+```bash
+$ npm install
 
 ## Run
 Run the application with the following command

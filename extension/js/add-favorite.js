@@ -31,13 +31,13 @@ document.getElementById('form').addEventListener('submit', function(e) {
           'x-access-token' : result.token
         })
       }
-      fetch('http://localhost:4003/favourite/add',options)
+      fetch('http://localhost:4003/favorite/add',options)
       .then(res => {
         if(res.ok) return res.json()
         else throw new Error(res.status)
       })
       .then(data => {
-        window.location = "/favourite.html"
+        window.location = "/favorite.html"
       })
       .catch(error => console.log(error))
     })

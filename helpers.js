@@ -30,7 +30,7 @@ let handleResponse = (data) => {
   });
 }
 
-let handleFavouriteResponse = (data,event) => {
+let handleFavoriteResponse = (data,event) => {
   pusher.trigger('cryptowatch', event, {
     "update": data
   });
@@ -45,6 +45,6 @@ module.exports = {
   allowCrossDomain : allowCrossDomain,
   fetchCoins : fetchCoins,
   handleResponse : handleResponse,
-  handleFavouriteResponse : handleFavouriteResponse,
+  handleFavoriteResponse : handleFavoriteResponse,
   generateUrl : generateUrl
 }

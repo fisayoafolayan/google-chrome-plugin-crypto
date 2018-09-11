@@ -6,7 +6,7 @@ const pusher = new Pusher('a1fe16427550ee94f4db', {
 window.addEventListener('load', function(evt) {
   let xhr = new XMLHttpRequest();
   getToken(function(result) {
-    xhr.open("GET", 'http://localhost:4003/favourite', true);
+    xhr.open("GET", 'http://localhost:4003/favorite', true);
     xhr.setRequestHeader('x-access-token',result.token)
     xhr.send();
   })

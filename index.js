@@ -11,7 +11,7 @@ const db        = new DB("sqlitedb")
 const app       = express()
 const router    = express.Router()
 
-const {allowCrossDomain,fetchCoins,handleResponse,handleFavouriteResponse,generateUrl} = helpers
+const {allowCrossDomain,fetchCoins,handleResponse,handleFavoriteResponse,generateUrl} = helpers
 const defaultUrl= generateUrl(cryptos.coins,cryptos.currencies)
 
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -58,22 +58,22 @@ router.get('/coins', function(req, res) {
     });
 })
 
-router.post('/favourite/add', function(req, res) {
+router.post('/favorite/add', function(req, res) {
     let token = req.headers['x-access-token'];
     jwt.verify(token, config.secret, function(err, decoded) {
         if (err) return res.status(401).send(JSON.stringify({message: 'Unauthorized request' }))
-        db.insertFavourite([req.body.coin, decoded.id], (err,favs) => {
+        db.insertFavorite([req.body.coin, decoded.id], (err,favs) => {
         if (err) return res.status(500).send(JSON.stringify({message : "There was a problem adding your favs"}))
-        res.status(200).send(JSON.stringify({message: "Coin added to your favourites"}))
+        res.status(200).send(JSON.stringify({message: "Coin added to your favorites"}))
         }); 
     });
 })
 
-router.get('/favourite', function(req, res) {
+router.get('/favorite', function(req, res) {
     let token = req.headers['x-access-token'];
     jwt.verify(token, config.secret, function(err, decoded) {
         if (err) return res.status(401).send(JSON.stringify({message: 'Unauthorized request' }))
-        db.selectFavourite(decoded.id, (err,favs) => {
+        db.selectFavorite(decoded.id, (err,favs) => {
         // We use the favs returned by the db manager
            if (err) return res.status(500).send(JSON.stringify({message : "There was a problem getting your favs"}))
               let coins = []
@@ -81,7 +81,7 @@ router.get('/favourite', function(req, res) {
                 favs.forEach( fav => coins.push(fav.coin))
                 const url = generateUrl(coins,cryptos.currencies)
                 const event = `user${decoded.id}` 
-                fetchCoins(url, handleFavouriteResponse, event)
+                fetchCoins(url, handleFavoriteResponse, event)
                 res.status(200).send(JSON.stringify({event : event}))
               } else {
                 res.status(200).send(JSON.stringify({message : "You do not have favs"}))
