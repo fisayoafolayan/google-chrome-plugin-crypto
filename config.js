@@ -1,5 +1,5 @@
 module.exports = {
-  appId: '569957',
+  appId: 'YOUR-APP-ID',
   key: 'YOUR-KEY-HERE',
   secret: 'YOUR-SECRET-HERE',
   cluster: 'YOUR-CLUSTER-HERE',

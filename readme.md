@@ -13,10 +13,12 @@ $ git clone https://github.com/fisayoafolayan/google-chrome-plugin-crypto.git
 ### Prerequisites
 
 * Knowledge of HTML, CSS and JavaScript
-* Knowledge of HTML, CSS and JavaScript
 * Knowledge of Node.js and Node.js installed on your local computer
 * A Pusher app for realtime price tracking
 * A CryptoCompare API key.
+
+## Pusher key setup
+Open the `config.js` and `./extension/scripts.js` files and include your Pusher credentials in there. 
 
 ## Install dependencies
 Run the application with the following command
