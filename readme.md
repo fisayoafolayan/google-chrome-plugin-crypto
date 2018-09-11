@@ -18,7 +18,7 @@ $ git clone https://github.com/fisayoafolayan/google-chrome-plugin-crypto.git
 * A CryptoCompare API key.
 
 ## Pusher key setup
-Open the `config.js` and `./extension/scripts.js` files and include your Pusher credentials in there. 
+Open the `config.js` and `./extension/js/scripts.js` files and include your Pusher credentials in there. 
 
 ## Install dependencies
 Run the application with the following command
