@@ -1,6 +1,6 @@
 # How to build a chrome extension that shows cryptocurrency prices in realtime
 
-A simple application to track live cryptocurrency prices.
+A simple application to track live cryptocurrency prices. To follow along, this application has been documented as a two-part article on Pusher blog. You can read about it part 1 [here](https://pusher.com/tutorials/chrome-extension-cryptocurrency-part-1) and part two [here](https://pusher.com/tutorials/chrome-extension-cryptocurrency-part-2)
 
 ## Set up
 To set up this project, first clone the repositiory
